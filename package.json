@@ -1,6 +1,6 @@
 {
   "name": "webmount",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a static files mount server",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +24,7 @@
     "url": "https://github.com/hellopao/webmount/issues"
   },
   "homepage": "https://github.com/hellopao/webmount#readme",
-  "devDependencies": {
+  "dependencies": {
     "koa": "^1.0.0",
     "mz": "^2.0.0",
     "request": "^2.61.0",
