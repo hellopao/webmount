@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 "use strict";
+var onExit = require('signal-exit');
 
 var mount = require('../lib/index');
 
@@ -36,7 +37,7 @@ if (command === "start") {
 			}
 		})
 		.argv
-} else if (command === "stop"){
+} else if (command === "reset"){
 
 } else {
 	yargs.showHelp();
@@ -47,3 +48,7 @@ if (command === "reset") {
 } else {
 	mount.setProxy(argv);
 }
+
+onExit(function(){
+    mount.resetProxy();
+});
