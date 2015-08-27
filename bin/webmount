@@ -49,6 +49,13 @@ if (command === "reset") {
 	mount.setProxy(argv);
 }
 
-onExit(function(){
-    mount.resetProxy();
+var readline = require('readline');
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.on('SIGINT', function() {
+	mount.resetProxy();
+	process.exit();
 });
