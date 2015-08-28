@@ -3,7 +3,7 @@ var path = require('path');
 var fs = require('fs');
 
 var config = require('./config/config');
-var proxyTool = require('./lib/sysProxy');
+var proxyTool = require('./lib/systemProxy');
 
 var readFile = function (file){
 	return new Promise(function (resolve,reject){
